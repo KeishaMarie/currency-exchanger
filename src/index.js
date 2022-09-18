@@ -5,7 +5,7 @@ import CurrencyExchangerService from '../currency-exchanger-service.js';
 
 // Business Logic 
 function currencyExchanger(userInput, currencySelected) {
-  CurrencyExchangerService.currencyExchanger(userInput, currencySelected)
+  CurrencyExchangerService.currencyExchanger()
     .then(function(response) {
       if (response.conversion_rates[currencySelected]) {
         printElements(response, userInput, currencySelected);
