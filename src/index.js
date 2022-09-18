@@ -1,7 +1,7 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import {CurrencyExchangerService} from './currency-exchanger-service.js';
+import {CurrencyExchangerService} from '../currency-exchanger-service.js';
 
 // Business Logic 
 function currencyExchanger(userInput, currencySelected) {
