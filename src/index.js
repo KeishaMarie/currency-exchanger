@@ -7,10 +7,14 @@ import {CurrencyExchangerService} from './currency-exchanger-service.js';
 function currencyExchanger() {
   CurrencyExchangerService.currencyExchanger()
     .then(function(response) {
-      if (response.main) {
+      if (response.conversion_rates) {
         printElements(response);
       } else {
         printError(response);
       }
     });
 }
+
+function printElements(response) {
+  let userInput = document.querySelector("#userInput").value;
+  let currencySelected = document.querySelector("#currencySelected").value;
