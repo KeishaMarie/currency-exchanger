@@ -1,13 +1,13 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import {CurrencyExchangerService} from '../currency-exchanger-service.js';
+import CurrencyExchangerService from '../currency-exchanger-service.js';
 
 // Business Logic 
 function currencyExchanger(userInput, currencySelected) {
   CurrencyExchangerService.currencyExchanger(userInput, currencySelected)
     .then(function(response) {
-      if (response.conversion_rates) {
+      if (response.conversion_rates[currencySelected]) {
         printElements(response, userInput, currencySelected);
       } else {
         printError(response, userInput, currencySelected);
@@ -18,11 +18,11 @@ function currencyExchanger(userInput, currencySelected) {
 
 // UI Logic
 function printElements(response, userInput, currencySelected) {
-  document.querySelector('p#output').innerText = `The exchange rate for ${userInput} USD is ${(response.conversion_rates[currencySelected] * userInput)} ${currencySelected}.`;
+  document.querySelector('#output').innerText = `The exchange rate for ${userInput} USD is ${(response.conversion_rates[currencySelected] * userInput)} ${currencySelected}.`;
 }
 
 function printError(response, userInput) {
-  document.querySelector('p#output').innerText = `Unable to access currency exchange data for ${userInput} USD. ${response}`;
+  document.querySelector('#output').innerText = `Unable to access currency exchange data for ${userInput} USD. ${response}`;
 }
 
 function handleFormSubmission(event) {
