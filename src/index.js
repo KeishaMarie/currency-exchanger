@@ -15,6 +15,5 @@ function currencyExchanger() {
     });
 }
 
-function printElements(response) {
-  let userInput = document.querySelector("#userInput").value;
-  let currencySelected = document.querySelector("#currencySelected").value;
+
+// UI Logic
