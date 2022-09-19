@@ -1,22 +1,24 @@
-# (Application Name)
+# Currency Exchanger
 
-#### (Brief Description of Application)
+#### Determine what your USD is worth in other currencies.
 
-#### By (Your Name Here)
+#### Keisha Hepner
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* HTML
+* JavaScript
+* CSS
+* jest
+* babel
+* eslint
 
 ## Description
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
+* Tested on Node 16.17.0
+* 
 * _in a simple_
 * _easy-to-understand_
 * _format_

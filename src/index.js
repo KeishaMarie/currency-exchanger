@@ -15,14 +15,14 @@ function currencyExchanger(userInput, currencySelected) {
     });
 }
 
-
 // UI Logic
+
 function printElements(response, userInput, currencySelected) {
   document.querySelector('#output').innerText = `The exchange rate for ${userInput} USD is ${(response.conversion_rates[currencySelected] * userInput)} ${currencySelected}.`;
 }
 
 function printError(response, userInput) {
-  document.querySelector('#output').innerText = `Unable to access currency exchange data for ${userInput} USD. ${response}`;
+  document.querySelector('#output').innerText = `Unable to access currency exchange data for ${userInput} USD.`;
 }
 
 function handleFormSubmission(event) {
